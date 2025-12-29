@@ -5,223 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praxis - Industrial Data for Embodied AI</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Praxis</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Praxis</h1>
+            <p><em>Industrial Data for Embodied AI</em></p>
+        </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">
-                    <span class="hero-accent">Praxis</span><br>
-                    Industrial Data for Embodied AI
-                </h1>
-                <p class="hero-subtitle">
-                    The Scale AI for robotics. We manufacture rich, real-world experience for robots and embodied agents, treating data production as infrastructure rather than a research chore.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </section>
+        <nav>
+            <a href="#about">About</a> | 
+            <a href="#problem">The Problem</a> | 
+            <a href="#solution">Our Solution</a> | 
+            <a href="#team">Team</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Why Embodied AI, Why Now</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Next Phase of AI</h3>
-                        <p>Embodied systems that perceive, decide, and act in the physical world represent the future of meaningful AGI.</p>
-                    </div>
-                    <div class="card">
-                        <h3>$25T Market</h3>
-                        <p>The global robotics industry is projected to grow from ~$91B in 2024 to ~$25T by 2050.</p>
-                    </div>
-                    <div class="card">
-                        <h3>$4-10B TAM</h3>
-                        <p>Medium-term addressable market of ~$4–10B annually by 2030 for robotics data infrastructure.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="problem-section">
-            <div class="container">
-                <h2 class="section-title">The Bottleneck: Real-World Experience</h2>
-                <p class="section-intro">Progress in embodied AI is bottlenecked by rich, real-world experience, not model architectures.</p>
+        <main>
+            <section id="about">
+                <h2>About Praxis</h2>
+                <p><strong>Praxis (n.):</strong> action, practice, doing; the lived execution of an idea rather than the theory of it.</p>
+                <p>Praxis is the Scale AI for robotics: an industrial data company that manufactures rich, real-world experience for robots and embodied agents, treating data production as infrastructure rather than a lab-bound research chore or opportunistic data grab.</p>
                 
-                <div class="problem-grid">
-                    <div class="problem-item">
-                        <h3>Current Data Requirements</h3>
-                        <ul class="requirements-list">
-                            <li>Task-conditioned (explicit goals, instructions, rewards)</li>
-                            <li>Multimodal (vision, force/torque, proprioception, language, audio)</li>
-                            <li>Failure-inclusive (errors, recoveries, and edge cases)</li>
-                        </ul>
-                    </div>
-                    <div class="problem-item">
-                        <h3>Existing Insufficient Solutions</h3>
-                        <div class="solutions-grid">
-                            <div class="solution-card inadequate">
-                                <h4>Lab-bound Collection</h4>
-                                <p>High control but low realism, small environments, low throughput</p>
-                            </div>
-                            <div class="solution-card inadequate">
-                                <h4>Opportunistic Collection</h4>
-                                <p>High realism but low control, inconsistent task definitions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h3>Why Embodied AI, Why Now</h3>
+                <ul>
+                    <li>The next phase of AI is embodied systems that perceive, decide, and act in the physical world.</li>
+                    <li>Meaningful AGI must manipulate objects, navigate complex environments, coordinate with humans, and execute long-horizon tasks under real-world constraints.</li>
+                    <li>The global robotics industry is projected to grow from ~$91B in 2024 to ~$25T by 2050, spanning humanoids, mobile, industrial, and service robotics.</li>
+                    <li>If embodied AI follows analogous patterns to software and LLMs, directing even 2–5% of robotics and embodied-AI spend into external data generation, curation, and infrastructure implies a medium-term TAM of ~$4–10B annually by 2030.</li>
+                </ul>
+            </section>
 
-        <section id="solution" class="section">
-            <div class="container">
-                <h2 class="section-title">Solution: Data as an Industrial Process</h2>
-                <p class="section-intro">Praxis treats data production as manufacturing, not research.</p>
+            <section id="problem">
+                <h2>The Bottleneck: Real-World Experience</h2>
+                <p>Progress in embodied AI is bottlenecked by rich, real-world experience, not model architectures.</p>
                 
-                <div class="solution-grid">
-                    <div class="solution-feature">
-                        <h3>Standardized Protocols</h3>
-                        <p>Task-specific protocols codified as SOPs with standardized capture rigs and trained human operators.</p>
-                    </div>
-                    <div class="solution-feature">
-                        <h3>Industrial Control</h3>
-                        <p>Rigorous QA, validation, and dataset versioning optimized for consistency and controlled realism.</p>
-                    </div>
-                    <div class="solution-feature">
-                        <h3>Failure-Inclusive Data</h3>
-                        <p>Explicitly captures errors, recoveries, and edge cases since deployment robustness depends on off-nominal behavior.</p>
-                    </div>
-                    <div class="solution-feature">
-                        <h3>Real-World Environments</h3>
-                        <p>Purpose-built test environments and live operational settings for warehousing, retail, and light manufacturing.</p>
-                    </div>
-                </div>
+                <p><strong>Robotics systems require data that is:</strong></p>
+                <ul>
+                    <li>task-conditioned (explicit goals, instructions, rewards)</li>
+                    <li>multimodal (vision, force/torque, proprioception, language, audio)</li>
+                    <li>failure-inclusive (errors, recoveries, and edge cases)</li>
+                </ul>
 
-                <div class="advantage-section">
-                    <h3>India Advantage</h3>
-                    <div class="advantage-grid">
-                        <div class="advantage-item">
-                            <strong>~200 acres</strong>
-                            <p>of deployable land for mock warehouses and retail environments</p>
-                        </div>
-                        <div class="advantage-item">
-                            <strong>~1,000 workers</strong>
-                            <p>trained for data capture and human-in-the-loop workflows</p>
-                        </div>
-                        <div class="advantage-item">
-                            <strong>Environmental diversity</strong>
-                            <p>across industrial, urban, and outdoor settings</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <p><strong>Existing data sources fall into two insufficient extremes:</strong></p>
+                <ul>
+                    <li><strong>Lab-bound collection:</strong> high control but low realism, small environments, low throughput, and slow iteration.</li>
+                    <li><strong>Opportunistic factory or crowdsourced collection:</strong> high realism but low control, inconsistent task definitions, poor metadata, weak failure labeling, and limited reproducibility.</li>
+                </ul>
 
-        <section class="business-model">
-            <div class="container">
-                <h2 class="section-title">Business Model</h2>
-                <div class="model-grid">
-                    <div class="model-card">
-                        <h3>Revenue Streams</h3>
-                        <ul>
-                            <li>Custom data pipelines (early phase)</li>
-                            <li>Standardized subscription datasets</li>
-                            <li>Task template productization</li>
-                        </ul>
-                    </div>
-                    <div class="model-card">
-                        <h3>High Switching Costs</h3>
-                        <ul>
-                            <li>Deep integration into training loops</li>
-                            <li>Protocol and environment lock-in</li>
-                            <li>Retraining and re-validation costs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <p>Simulation and scraped video break down at contact-rich manipulation, messy edge cases, and long-horizon control, leaving a persistent sim-to-real gap.</p>
+                <p>Without a dedicated data-production layer, embodied-AI teams either accept brittle systems and long iteration cycles or burn capital reinventing pipelines per project.</p>
+            </section>
 
-        <section id="team" class="section">
-            <div class="container">
-                <h2 class="section-title">Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <h3>Rohan Seelamsetty</h3>
-                        <p class="team-role">Co-Founder</p>
-                        <p>Cognitive Science at University of Pennsylvania, former Apollo Fellow at Oxford. Background in manufacturing environments and investment banking with hands-on industrial operations experience.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Dev Karpe</h3>
-                        <p class="team-role">Co-Founder</p>
-                        <p>Huntsman Program at University of Pennsylvania. Apollo Fellow at Oxford, CEO office experience at Fortune 500 QSR and logistics network, driving operational improvements and automation opportunities.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Vardhan Agnihotri</h3>
-                        <p class="team-role">Co-Founder</p>
-                        <p>Penn M&T studying EE and finance, joining xAI as Member of Technical Staff. Builds AI agents and autonomous robots, focused on robotics algorithms and model architectures.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Ishan Ahluwalia</h3>
-                        <p class="team-role">Co-Founder</p>
-                        <p>University of Pennsylvania studying AI and Applied Mathematics, robotics researcher at GRASP Lab. Builds ML systems for perception and navigation with real-world deployment experience.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <section id="solution">
+                <h2>Solution: Data as an Industrial Process</h2>
+                <p>Praxis treats data production as manufacturing, not research.</p>
+                <p>The core product is standardized, repeatable, high-quality egocentric experience captured through industrial-grade processes.</p>
+                
+                <h3>Our Approach</h3>
+                <ul>
+                    <li>Purpose-built test environments and live operational settings</li>
+                    <li>Standardized protocols and capture rigs to ensure consistency and trainability</li>
+                    <li>Task-specific protocols codified as SOPs</li>
+                    <li>Standardized capture rigs (sensors, synchronization, telemetry, QA hooks)</li>
+                    <li>Trained human operators executing tasks and interventions</li>
+                    <li>Human-in-the-loop correction, demonstration, and feedback</li>
+                    <li>Rigorous QA, validation, and dataset versioning</li>
+                </ul>
 
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact-intro">Ready to accelerate your embodied AI development with industrial-grade data?</p>
-                <div class="contact-content">
-                    <a href="mailto:hello@praxis.ai" class="btn btn-primary btn-large">Contact Us</a>
-                </div>
-            </div>
-        </section>
-    </main>
+                <p>The system is explicitly optimized for consistency, controlled realism over random collection, and failure and recovery over curated successes, since deployment robustness depends on off-nominal behavior.</p>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <strong>Praxis</strong>
-                    <p>Industrial Data for Embodied AI</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#solution">Solution</a>
-                    <a href="#team">Team</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Praxis. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+                <h3>India Advantage</h3>
+                <ul>
+                    <li><strong>~200 acres</strong> of deployable land (family-owned) for mock warehouses and retail/domestic environments designed to mirror real operational complexity</li>
+                    <li><strong>~1,000 workers</strong> who can be trained for data capture and human-in-the-loop workflows, with capacity to scale rapidly</li>
+                    <li><strong>Environmental diversity</strong> across industrial, urban, and outdoor settings</li>
+                    <li><strong>Deep operational and technical talent pools</strong></li>
+                    <li><strong>Lower friction</strong> for building and operating physical test environments</li>
+                </ul>
 
-    <script src="script.js"></script>
+                <h3>Business Model</h3>
+                <p><strong>Revenue from:</strong></p>
+                <ul>
+                    <li>Custom data pipelines (early)</li>
+                    <li>Productizing families of environments and task templates (e.g., bin picking, shelf restocking, store navigation, humanoid helper tasks) into standardized subscription datasets</li>
+                </ul>
+
+                <p><strong>High switching costs from:</strong></p>
+                <ul>
+                    <li>Deep integration into training, evaluation, and deployment loops</li>
+                    <li>Protocol and environment lock-in</li>
+                    <li>Retraining and re-validation costs</li>
+                </ul>
+            </section>
+
+            <section id="team">
+                <h2>Team</h2>
+                
+                <h3>Rohan Seelamsetty</h3>
+                <p>Studies Cognitive Science at the University of Pennsylvania and is a former Apollo Fellow at Oxford, sponsored by Open Philanthropy, where he focused on the intersection of artificial intelligence, moral philosophy, and governance. He grew up working in manufacturing environments through his family business and has hands-on experience in supply chains and industrial operations, including work at a publicly listed industrial Engineering, Procurement, and Construction company. He also has transaction and deal experience in healthcare and industrials investment banking at Stifel, supporting M&A and strategic analysis.</p>
+
+                <h3>Dev Karpe</h3>
+                <p>Student in the Huntsman Program at the University of Pennsylvania (International Studies & Wharton). He was also an Apollo Fellow at Oxford where he focused on technology, institutions, and decision-making. This summer he worked in the CEO's office at a Fortune 500 global QSR and logistics network, driving operational improvements and identifying automation and AI-enabled process opportunities across a large-scale distribution and retail footprint. He also has transaction and modeling experience through investment banking work in energy infrastructure and private markets.</p>
+
+                <h3>Vardhan Agnihotri</h3>
+                <p>Sophomore at Penn M&T studying EE and finance, focusing on robotics and physical intelligence. He's joining xAI next semester as a Member of Technical Staff and spends most of his time building things - most recently AI agents to automate digital reselling and an autonomous robot that fills cracks in concrete. He's especially interested in learning more about the model architectures behind robotic algorithms and the data needs of robotics labs/companies.</p>
+
+                <h3>Ishan Ahluwalia</h3>
+                <p>University of Pennsylvania student studying Artificial Intelligence and Applied Mathematics and a robotics researcher at the GRASP Lab. He builds ML systems for perception and navigation, with a strong foundation in algorithms and real-world robotic deployment constraints. At Praxis, he focuses on translating research-grade robotics needs into scalable data protocols and evaluation setups that improve model reliability in the physical world.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Interested in accelerating your embodied AI development with industrial-grade data?</p>
+                <p>Email us at: <a href="mailto:hello@praxis.ai">hello@praxis.ai</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <hr>
+            <p>&copy; 2024 Praxis. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
