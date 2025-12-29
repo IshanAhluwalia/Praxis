@@ -1,0 +1,45 @@
+# GitHub Pages configuration for Praxis website
+
+title: Praxis
+description: Industrial Data for Embodied AI - The Scale AI for robotics
+url: "https://ishanahluwalia.github.io"
+baseurl: "/Praxis"
+
+# SEO settings
+lang: en
+author: Praxis Team
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files
+include:
+  - _pages
+
+# SEO meta tags
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/og-image.png
+
+# Social media
+social:
+  name: Praxis
+  links:
+    - https://github.com/ishanahluwalia/Praxis
