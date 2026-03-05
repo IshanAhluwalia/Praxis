@@ -19,18 +19,8 @@
             min-height: 100vh;
         }
 
-        canvas#bg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            opacity: 0.04;
-            pointer-events: none;
-            z-index: 0;
-        }
-
         .wrap {
             position: relative;
-            z-index: 1;
             max-width: 600px;
             margin: 0 auto;
             padding: 4rem 2rem 6rem;
@@ -150,8 +140,6 @@
 </head>
 <body>
 
-<canvas id="bg"></canvas>
-
 <div class="wrap">
 
     <header>
@@ -166,12 +154,7 @@
 
     <section>
         <div class="label">// approach</div>
-        <ul>
-            <li>Purpose-built environments across industrial, domestic, and urban settings</li>
-            <li>Standardized capture rigs — vision, force/torque, proprioception, language</li>
-            <li>Human operators executing tasks, interventions, and failure recovery</li>
-            <li>End-to-end QA, dataset versioning, and pipeline delivery</li>
-        </ul>
+        <p>We operate purpose-built environments across industrial, domestic, and urban settings using standardized capture rigs — vision, force/torque, proprioception, language. Trained human operators execute tasks, interventions, and failure recovery. Everything goes through end-to-end QA, dataset versioning, and pipeline delivery.</p>
     </section>
 
     <section>
@@ -191,11 +174,7 @@
             <span class="team-name">Dev Karpe</span>
             <span class="team-note">Huntsman Program, Penn · Apollo Fellow, Oxford</span>
         </div>
-        <div class="team-row">
-            <span class="team-name">Vardhan Agnihotri</span>
-            <span class="team-note">M&T EE + Finance, Penn · MTS, xAI</span>
-        </div>
-        <div class="team-row">
+<div class="team-row">
             <span class="team-name">Ishan Ahluwalia</span>
             <span class="team-note">AI + Applied Math, Penn · GRASP Lab</span>
         </div>
@@ -211,54 +190,6 @@
 </div>
 
 <script>
-    // subtle animated topo background
-    const canvas = document.getElementById('bg');
-    const ctx = canvas.getContext('2d');
-    let t = 0;
-
-    function resize() {
-        canvas.width  = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    // simple noise substitute using sin/cos layers
-    function noise(x, y, z) {
-        return Math.sin(x * 0.8 + z) * Math.cos(y * 0.6 + z * 0.7)
-             + Math.sin(x * 0.3 + z * 1.3) * Math.cos(y * 0.4 + z * 0.9) * 0.5;
-    }
-
-    function drawTopo() {
-        const w = canvas.width, h = canvas.height;
-        ctx.clearRect(0, 0, w, h);
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = 1;
-
-        const levels = 12;
-        for (let lvl = 0; lvl < levels; lvl++) {
-            const threshold = -1.2 + (lvl / levels) * 2.4;
-            ctx.beginPath();
-            let moved = false;
-            for (let x = 0; x <= w; x += 4) {
-                for (let y = 0; y <= h; y += 4) {
-                    const nx = x / w * 5;
-                    const ny = y / h * 5;
-                    const v = noise(nx, ny, t * 0.15);
-                    if (Math.abs(v - threshold) < 0.08) {
-                        if (!moved) { ctx.moveTo(x, y); moved = true; }
-                        else ctx.lineTo(x, y);
-                    }
-                }
-            }
-            ctx.stroke();
-        }
-
-        t++;
-        requestAnimationFrame(drawTopo);
-    }
-    drawTopo();
-
     // staggered reveal on load
     const sections = document.querySelectorAll('section');
     sections.forEach((s, i) => {
