@@ -12,34 +12,34 @@
 
         body {
             font-family: 'IBM Plex Mono', 'SF Mono', 'Consolas', monospace;
-            background: #f7f4ed;
-            color: #1a1a1a;
-            font-size: 0.9rem;
-            line-height: 1.85;
+            background: #fff;
+            color: #111;
+            font-size: 0.88rem;
+            line-height: 1.9;
             min-height: 100vh;
         }
 
         .wrap {
-            position: relative;
-            max-width: 600px;
+            max-width: 560px;
             margin: 0 auto;
-            padding: 4rem 2rem 6rem;
+            padding: 5rem 2rem 7rem;
         }
 
         /* header */
         .logo {
-            font-size: 1.4rem;
+            font-size: 1rem;
             font-weight: 500;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.4rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
         }
 
         .cursor {
             display: inline-block;
-            width: 0.6ch;
-            height: 1.1em;
-            background: #1a1a1a;
-            margin-left: 2px;
+            width: 0.55ch;
+            height: 0.95em;
+            background: #111;
+            margin-left: 3px;
             vertical-align: text-bottom;
             animation: blink 1.1s step-end infinite;
         }
@@ -50,17 +50,20 @@
         }
 
         .tagline {
-            color: #888;
-            font-size: 0.85rem;
-            margin-bottom: 3.5rem;
+            color: #aaa;
+            font-size: 0.78rem;
+            margin-bottom: 4rem;
+            letter-spacing: 0.02em;
         }
 
         /* sections */
         section {
-            margin-bottom: 2.8rem;
+            margin-bottom: 2.4rem;
+            padding-left: 1.2rem;
+            border-left: 1px solid #e8e8e8;
             opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+            transition: opacity 0.45s ease, transform 0.45s ease;
         }
 
         section.visible {
@@ -69,71 +72,56 @@
         }
 
         .label {
-            color: #999;
-            font-size: 0.75rem;
-            margin-bottom: 0.9rem;
-            letter-spacing: 0.04em;
+            color: #bbb;
+            font-size: 0.7rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         p {
-            color: #333;
-            margin-bottom: 0.8rem;
+            color: #444;
+            margin-bottom: 0.7rem;
         }
 
         p:last-child { margin-bottom: 0; }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li::before {
-            content: "— ";
-            color: #999;
-        }
-
-        ul li {
-            margin-bottom: 0.35rem;
-            color: #333;
-        }
 
         /* team */
         .team-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .team-row:first-child { border-top: 1px solid #e0e0e0; }
+        .team-row:first-child { border-top: 1px solid #f0f0f0; }
 
-        .team-name { font-weight: 500; }
+        .team-name { font-weight: 500; color: #111; }
 
         .team-note {
-            color: #999;
-            font-size: 0.78rem;
+            color: #bbb;
+            font-size: 0.75rem;
             text-align: right;
             max-width: 55%;
         }
 
-        /* contact */
         a {
-            color: #1a1a1a;
+            color: #111;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
 
-        a:hover { color: #555; }
+        a:hover { color: #666; }
 
         .divider {
             border: none;
-            border-top: 1px solid #e0e0e0;
-            margin: 3rem 0;
+            border-top: 1px solid #f0f0f0;
+            margin: 2.8rem 0 2.8rem 1.2rem;
         }
 
         @media (max-width: 500px) {
-            .team-row { flex-direction: column; gap: 0.15rem; }
+            .team-row { flex-direction: column; gap: 0.1rem; }
             .team-note { text-align: left; max-width: 100%; }
         }
     </style>
@@ -144,28 +132,28 @@
 
     <header>
         <div class="logo">Praxis<span class="cursor"></span></div>
-        <div class="tagline">Industrial data for embodied AI.</div>
+        <div class="tagline">training data infrastructure for robotics</div>
     </header>
 
     <section>
-        <div class="label">// mission</div>
-        <p>We manufacture the physical-world experience that robots need to learn — treating data production as infrastructure, not research.</p>
+        <div class="label">mission</div>
+        <p>We are building the largest provider of high-quality, high-volume training data for large-scale robotic models — treating data production as industrial infrastructure, not a research problem.</p>
     </section>
 
     <section>
-        <div class="label">// approach</div>
+        <div class="label">approach</div>
         <p>We operate purpose-built environments across industrial, domestic, and urban settings using standardized capture rigs — vision, force/torque, proprioception, language. Trained human operators execute tasks, interventions, and failure recovery. Everything goes through end-to-end QA, dataset versioning, and pipeline delivery.</p>
     </section>
 
     <section>
-        <div class="label">// advantage</div>
+        <div class="label">advantage</div>
         <p>Based in India. ~200 acres of deployable land. ~1,000 trained operators. Structurally difficult to replicate elsewhere.</p>
     </section>
 
     <hr class="divider">
 
     <section>
-        <div class="label">// team</div>
+        <div class="label">team</div>
         <div class="team-row">
             <span class="team-name">Rohan Seelamsetty</span>
             <span class="team-note">Cognitive Science, Penn · Apollo Fellow, Oxford</span>
@@ -174,7 +162,7 @@
             <span class="team-name">Dev Karpe</span>
             <span class="team-note">Huntsman Program, Penn · Apollo Fellow, Oxford</span>
         </div>
-<div class="team-row">
+        <div class="team-row">
             <span class="team-name">Ishan Ahluwalia</span>
             <span class="team-note">AI + Applied Math, Penn · GRASP Lab</span>
         </div>
@@ -183,17 +171,16 @@
     <hr class="divider">
 
     <section>
-        <div class="label">// contact</div>
+        <div class="label">contact</div>
         <p><a href="mailto:hello@praxis-robotics.com">hello@praxis-robotics.com</a></p>
     </section>
 
 </div>
 
 <script>
-    // staggered reveal on load
     const sections = document.querySelectorAll('section');
     sections.forEach((s, i) => {
-        setTimeout(() => s.classList.add('visible'), 100 + i * 120);
+        setTimeout(() => s.classList.add('visible'), 80 + i * 100);
     });
 </script>
 
